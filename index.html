@@ -6,6 +6,49 @@
 <body>
   <script>
   // This is where we play Rock, Paper, Scissors
+  function computerPlay() {
+     cpurand = Math.floor((Math.random() * 3) + 1);
+     if (cpurand == 1) {
+       cpuchoice = "rock"
+     }
+     else if (cpurand == 2) {
+       cpuchoice = "paper"
+     }
+     else {
+       cpuchoice = "scissors"
+     }
+     return cpuchoice
+  }
+  function play(playerchoice, cpuchoice) {
+    playerchoice = playerchoice.toLowerCase()
+    if (cpuchoice == playerchoice){
+      verdict = "It's a draw!"
+    }
+    else if (cpuchoice == "rock" && playerchoice == "scissors") {
+      verdict = "You lose!"
+    }
+    else if (cpuchoice == "paper" && playerchoice == "rock") {
+      verdict = "You lose!"
+    }
+    else if (cpuchoice == "scissors" && playerchoice == "paper") {
+      verdict = "You lose!"
+    }
+    else if (cpuchoice == "rock" && playerchoice == "paper") {
+      verdict = "You win!"
+    }
+    else if (cpuchoice == "paper" && playerchoice == "scissors") {
+      verdict = "You win!"
+    }
+    else if (cpuchoice == "scissors" && playerchoice == "rock") {
+      verdict = "You win!"
+    }
+    else {
+      verdict = "Invalid Selection!"
+    }
+    return "you chose " + playerchoice + ". The CPU chose " + cpuchoice + ". " + verdict
+  }
+
+  console.log(play("paPer", computerPlay()))
   </script>
 </body>
 </html>
