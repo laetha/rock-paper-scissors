@@ -1,0 +1,1 @@
+This is a Rock, Paper, Scissors test played online via the console log. It is part of [this assignment on The Odin Project](https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors?ref=lnav)
